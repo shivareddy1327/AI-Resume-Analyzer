@@ -1,0 +1,277 @@
+/* ================================================
+   Smart Resume AI - Global Stylesheet
+   ================================================ */
+
+/* ---------- Base & Body ---------- */
+body {
+    background-color: #0e0e0e;
+    color: #e0e0e0;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+/* ---------- Sidebar ---------- */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    border-right: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+[data-testid="stSidebar"] .stButton > button {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+    border: 1px solid rgba(76, 175, 80, 0.25);
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+[data-testid="stSidebar"] .stButton > button:hover {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: #4CAF50;
+    color: #ffffff;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
+}
+
+/* ---------- Main Content Area ---------- */
+.main .block-container {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* ---------- Streamlit Widgets ---------- */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border: 1px solid rgba(76, 175, 80, 0.3) !important;
+    border-radius: 8px !important;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #4CAF50 !important;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15) !important;
+    outline: none !important;
+}
+
+/* ---------- Buttons ---------- */
+.stButton > button[kind="primary"] {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0.65rem 2rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.stButton > button[kind="primary"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.stButton > button[kind="secondary"] {
+    background: transparent;
+    color: #4CAF50;
+    border: 1.5px solid #4CAF50;
+    border-radius: 25px;
+    padding: 0.6rem 1.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.stButton > button[kind="secondary"]:hover {
+    background: rgba(76, 175, 80, 0.1);
+    transform: translateY(-1px);
+}
+
+/* ---------- Metric Cards ---------- */
+[data-testid="metric-container"] {
+    background: rgba(30, 30, 30, 0.9);
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+[data-testid="metric-container"]:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.12);
+}
+
+[data-testid="metric-container"] [data-testid="stMetricValue"] {
+    color: #4CAF50;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+[data-testid="metric-container"] [data-testid="stMetricLabel"] {
+    color: #aaaaaa;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Expanders ---------- */
+[data-testid="stExpander"] {
+    background: rgba(26, 26, 26, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    margin-bottom: 0.6rem;
+    overflow: hidden;
+}
+
+[data-testid="stExpander"]:hover {
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+/* ---------- Tabs ---------- */
+.stTabs [data-baseweb="tab-list"] {
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 10px;
+    padding: 4px;
+    gap: 4px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: transparent;
+    border-radius: 8px;
+    color: #aaa;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.stTabs [aria-selected="true"] {
+    background: #4CAF50 !important;
+    color: white !important;
+}
+
+/* ---------- File Uploader ---------- */
+[data-testid="stFileUploader"] {
+    background: rgba(30, 30, 30, 0.9);
+    border: 2px dashed rgba(76, 175, 80, 0.4);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: #4CAF50;
+    background: rgba(76, 175, 80, 0.05);
+}
+
+/* ---------- Progress Bar ---------- */
+.stProgress > div > div {
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    border-radius: 10px;
+}
+
+/* ---------- Alerts ---------- */
+.stSuccess {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.4);
+    border-radius: 10px;
+}
+
+.stError {
+    background: rgba(244, 67, 54, 0.1);
+    border: 1px solid rgba(244, 67, 54, 0.4);
+    border-radius: 10px;
+}
+
+.stWarning {
+    background: rgba(255, 152, 0, 0.1);
+    border: 1px solid rgba(255, 152, 0, 0.4);
+    border-radius: 10px;
+}
+
+.stInfo {
+    background: rgba(33, 150, 243, 0.1);
+    border: 1px solid rgba(33, 150, 243, 0.4);
+    border-radius: 10px;
+}
+
+/* ---------- Dataframe ---------- */
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Feature Card (from app.py) ---------- */
+.feature-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(76, 175, 80, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: rgba(76, 175, 80, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h2 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4CAF50;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #45a049;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .main .block-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
